@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import ContactForm from "./ContactForm";
 import ContactsTable from "./ContactsTable";
 
@@ -23,15 +24,15 @@ export default {
     };
   },
   methods: {
-    addContact(newContact) {
-      this.contacts.push(newContact);
+    async addContact(newContact) {
+      const { data } = await axios.post("/api/contacts", newContact);
 
-      localStorage.setItem("contacts", JSON.stringify(this.contacts));
+      this.contacts.push(data);
     }
   },
-  mounted() {
-    const existingContacts = JSON.parse(localStorage.getItem("contacts"));
-    this.contacts = existingContacts || [];
+  async mounted() {
+    const { data } = await axios.get("/api/contacts");
+    this.contacts = data;
   }
 };
 </script>

@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  props: ["contacts"]
+  props: ["contacts"],
 };
 </script>
 

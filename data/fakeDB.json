@@ -1,0 +1,20 @@
+{
+  "contacts": [
+    {
+      "firstName": "Jeff",
+      "lastName": "Lebowski",
+      "phone": "846-334-7263",
+      "type": "Cell",
+      "email": "thedude@hotmail.com",
+      "id": 1
+    },
+    {
+      "firstName": "Walter",
+      "lastName": "",
+      "phone": "844-474-9933",
+      "type": "Home",
+      "email": "wals@hotmail.com",
+      "id": 2
+    }
+  ]
+}

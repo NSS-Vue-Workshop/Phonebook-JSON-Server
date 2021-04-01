@@ -1,10 +1,15 @@
 <template>
   <div>
     <h3 class="teal--text">New Contact</h3>
-    <v-form @submit.prevent="handleSubmit">
-      <v-text-field outlined label="First Name" v-model="form.firstName" />
+    <v-form @submit.prevent="handleSubmit" ref="contactForm">
+      <v-text-field
+        :rules="validators.firstName"
+        outlined
+        label="First Name"
+        v-model="form.firstName"
+      />
       <v-text-field outlined label="Last Name" v-model="form.lastName" />
-      <v-text-field type="number" outlined label="Phone" v-model="form.phone" />
+      <v-text-field type="text" outlined label="Phone" v-model="form.phone" />
       <v-select
         outlined
         label="Phone Type"
@@ -26,13 +31,23 @@ export default {
         lastName: "",
         phone: "",
         type: "",
-        email: ""
+        email: "",
       },
-      phoneTypeOptions: ["Home", "Cell", "Office"]
+      phoneTypeOptions: ["Home", "Cell", "Office"],
+      validators: {
+        firstName: [
+          (val) => !!val || "Contact first name is required",
+          (val) =>
+            val.length < 25 || "First name must be less than 25 characters",
+        ],
+      },
     };
   },
   methods: {
     handleSubmit() {
+      const isValid = this.$refs.contactForm.validate();
+      if (!isValid) return;
+
       this.$emit("contact-submit", this.form);
 
       this.form = {
@@ -40,10 +55,11 @@ export default {
         lastName: "",
         phone: "",
         type: "",
-        email: ""
+        email: "",
       };
-    }
-  }
+      this.$refs.contactForm.resetValidation();
+    },
+  },
 };
 </script>
 
