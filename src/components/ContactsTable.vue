@@ -12,7 +12,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="contact in contacts" :key="contact.phone">
+          <tr
+            v-for="contact in contacts"
+            :key="contact.phone"
+            class="contact-row"
+          >
             <td>{{ contact.firstName }} {{ contact.lastName }}</td>
             <td>{{ contact.phone }}</td>
             <td>{{ contact.type }}</td>
@@ -26,7 +30,7 @@
 
 <script>
 export default {
-  props: ["contacts"],
+  props: ["contacts"]
 };
 </script>
 

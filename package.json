@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "db": "json-server -p 5000 -w data/fakeDB.json --routes data/routes.json",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "npm run serve & npm run db"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -23,6 +24,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^6.2.2",
+    "json-server": "^0.16.3",
     "prettier": "^1.19.1",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",

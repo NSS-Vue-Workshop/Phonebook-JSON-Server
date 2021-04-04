@@ -1,20 +1,35 @@
 {
-  "contacts": [
-    {
-      "firstName": "Jeff",
-      "lastName": "Lebowski",
-      "phone": "846-334-7263",
-      "type": "Cell",
-      "email": "thedude@hotmail.com",
-      "id": 1
-    },
-    {
-      "firstName": "Walter",
-      "lastName": "",
-      "phone": "844-474-9933",
-      "type": "Home",
-      "email": "wals@hotmail.com",
-      "id": 2
-    }
-  ]
+  "contacts": [{
+    "id": 1,
+    "firstName": "Woodie",
+    "lastName": "Shotton",
+    "email": "wshotton0@cam.ac.uk",
+    "phone": "233-448-9141",
+    "type": "Home",
+    "favorited": false
+  }, {
+    "id": 2,
+    "firstName": "Mick",
+    "lastName": "Knight",
+    "email": "mknight1@stumbleupon.com",
+    "phone": "295-225-5045",
+    "type": "Cell",
+    "favorited": false
+  }, {
+    "id": 3,
+    "firstName": "Merlina",
+    "lastName": "Ghelardoni",
+    "email": "mghelardoni2@vkontakte.ru",
+    "phone": "154-423-9122",
+    "type": "Office",
+    "favorited": true
+  }, {
+    "id": 4,
+    "firstName": "Zondra",
+    "lastName": "Sacaze",
+    "email": "zsacaze3@nydailynews.com",
+    "phone": "325-551-0954",
+    "type": "Cell",
+    "favorited": false
+  }]
 }
