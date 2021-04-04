@@ -1,24 +1,3 @@
-# phonebook
+# Phonebook
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The Phonebook application from Chapter 3 has been updated to use JSON server as a fake backend instead of persisting our contacts inside local storage. This will allow for more interesting and real world unit testing.
